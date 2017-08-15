@@ -328,7 +328,7 @@
         <p class="index-top-block-slogan"><a href="#">
         
             
-                没有泪光,风里劲闯,怀着心中新希望
+                -没有泪光,风里劲闯,怀着心中新希望
             
         
         </a></p>
@@ -391,6 +391,12 @@
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+            
+                <a class="index_share-link" href="/about" title="关于我">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        关于我
+                    </li>
+                </a>
             
         </ul>
 
@@ -496,7 +502,7 @@
         <div id="post_entry-right-info">
             <!-- Category -->
             <span class="post_entry-category">
-                
+                <a class="post_category-link" href="/categories/教程/">教程</a>
             </span>
 
             
@@ -558,7 +564,7 @@ archLinux安装教程
         <div id="post_entry-right-info">
             <!-- Category -->
             <span class="post_entry-category">
-                
+                <a class="post_category-link" href="/categories/教程/">教程</a>
             </span>
 
             
@@ -585,7 +591,7 @@ archLinux安装教程
 
     var locatePost = $('.locate-thumbnail-symbol').next();
     for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
+        randomNum = Math.floor(Math.random() * 22 + 1);
 
         locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
         locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
@@ -627,7 +633,7 @@ archLinux安装教程
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        cby1994229@gmail.com
+        1024721675@qq.com
         <b class="caret"></b>
     </a>
 </div>
@@ -640,7 +646,7 @@ archLinux安装教程
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="https://mail.google.com/mail/" target="_blank" title="给我发邮件">
+                    <a href="https://mail.qq.com/" target="_blank" title="给我发邮件">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -684,11 +690,44 @@ archLinux安装教程
 
     <!-- Categories  -->
     
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/教程/">教程<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
 
     <!-- Pages  -->
     
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">2</span>
+            </a>
+        </li>
+        
     
 </ul>
 
