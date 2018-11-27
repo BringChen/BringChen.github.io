@@ -12,7 +12,7 @@
     
     <title>
         
-            archLinux 安装笔记 | 
+            essentail phone刷机解锁教程 | 
         
         BringChen
     </title>
@@ -425,7 +425,7 @@
         
     
             <p class="article-headline-p">
-                archLinux 安装笔记
+                essentail phone刷机解锁教程
             </p>
         </div>
 
@@ -444,7 +444,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>BringChen</strong>
-        <span>8月 14, 2017</span>
+        <span>11月 27, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -536,170 +536,50 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>欢迎来到BringChen的博客</p>
-<p>archLinux安装教程</p>
+<p>essentail phone刷机解锁教程</p>
+
+下载ADB工具：https://developer.android.com/studio/releases/platform-tools
+下载essential phone（安卓之父）的驱动：https://www.essential.com/developer/current-builds
+当然如果嫌麻烦可以直接去我的网盘链接: https://pan.baidu.com/s/1hUST-kmUN_sczCnTrH7UrQ 提取码: wkde 
+
+
+准备工作：	
 <pre><code class="bash">
- 个人建议分一个区 sda1
-<span class="comment"># lsblk</span>
-
- 格式化
-<span class="comment"># mkfs.ext4 /dev/sda1 </span>
-
- 挂载
-<span class="comment"># mount /dev/sda1 /mnt</span>
-
- 这里是源文件
-<span class="comment"># cd /etc/pacman.d</span>
-
- 正则表达式保留中国源
-<span class="comment"># grep -A 1 '##.*China' mirrorlist|grep -v '\-\-'&gt; mirrorlist2</span>
-<span class="comment"># cat mirrorlist&gt;&gt;mirrorlist2</span>
-<span class="comment"># mv mirrorlist2 mirrorlist</span>
-
- 刷新
-<span class="comment"># pacman -Syy</span>
-
- 开始安装系统（需要等一小会儿）
-<span class="comment"># pacstrap -i /mnt base base-devel</span>
-
- 最后一步
-<span class="comment"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span>
-
- 进入系统
-<span class="comment"># arch-chroot /mnt</span>
-
- 设置时间
-<span class="comment"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span>
-
- 设置为utc
-<span class="comment"># hwclock --systohc --utc</span>
-
-<span class="comment"># nano /etc/locale.gen</span>
- （填入以下内容，然后按ctrl+x按y回车保存退出）
-en_US.UTF-8 UTF-8
-zh_CN.UTF-8 UTF-8
-
-<span class="comment"># locale-gen</span>
-
-<span class="comment"># echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</span>
-
-<span class="comment"># echo myhostname &gt; /etc/hostname</span>
-//myhostname 自定义，取自己想要的名字
-
-<span class="comment"># nano /etc/hosts</span>
-//在 ::1        localhost.localdomain    localhost 的下一行添加以下内容，myhostname 和上文的一致
-127.0.1.1    myhostname.localdomain    myhostname
-
-<span class="comment"># mkinitcpio -p linux</span>
-
- 设置root密码
-<span class="comment"># passwd root</span>
-
- 添加用户，user 可自定义
-<span class="comment"># useradd -m -g users -s /bin/bash user</span>
-
- 设置用户密码，user与上文相同
-<span class="comment"># passwd user</span>
-
- 还有一步之遥了
-
- efi引导（bios传统引导的看下面）
-<span class="comment"># pacman -S efibootmgr grub os-prober (efi引导）</span>
-<span class="comment"># grub-install --efi-directory=/boot --bootloader-id=grub(efi引导）</span>
-
- bios传统引导
- <span class="comment">#pacman -S grub-bios传统</span>
-<span class="comment">#grub-install /dev/sda传统---如果报错添加--force参数就好了</span>
-
- 多系统用户一定要添加不然启动的时候就只有一个系统
-pacman -S os-prober 
-
-grub-install --force /dev/sda
-
-<span class="comment"># grub-mkconfig -o /boot/grub/grub.cfg</span>
-
-<span class="comment"># systemctl enable dhcpcd</span>
-
-<span class="comment"># exit</span>
-
-<span class="comment"># umount -R /mnt</span>
-
-<span class="comment"># reboot</span>
+ 怎么打开开发者的模式就不用说了吧
+<span class="comment">
+设置 - 系统 - 关于手机 - 版本号（点五次）<br>
+设置 - 系统 - 开发人员选项 - OEM解锁 - 打开<br>
+设置 - 系统 - 开发人员选项 - USB 调试 - 选中
+ </span>
+ 2. 将手机通过 USB 线连接到电脑（如果手机端弹出提示同意调试）	
 </code></pre>
-<p>win10+archlinux双系统的继续操作</p>
-<p> 修改开机如把win设置为默认</p>
-<pre><code>默认情况下Windows 7/10对应的文件名是30_os-prober，第一个linux系统对应的是10-linux，00是header，05是debian-theme，
-可见10是第一个启动项，只需要更改Windows 7/10的文件名(06-09均可)即可改变启动顺序，经我测试，成功地修改了启动顺序。
 
-具体做法：
-</code></pre><pre><code class="bash"><span class="comment">#sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08_os-prober</span>
-<span class="comment">#sudo update-grub</span>
-</code></pre>
-<p> archlinux已经安装完成了接下来安装桌面，我安装的kde桌面</p>
-<p> 安装kde的桌面<br> <img src="/img/arch/arch4.png" alt="“kde”">  </p>
+1.OTA刷官方包方法（<font>只支持官方ota固件</font>）
 <pre><code class="bash">
- 安装plasma5 
+ 注意：本步骤是官方线刷步骤，只支持官方ota固件下的升级，无需手机解锁，无需手机 root。
+<span class="comment">
+ 1.下载官方的OTA固件（官网：https://www.essential.com/developer/current-builds）
+ </span>
+ <span class="comment">
+ 2.解压下载的ADB工具（解压下载的platform-tools），并ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录
+ </span>
+ <span class="comment">
+ 3.在弹出的命令行窗口中输入 adb reboot recovery 回车，手机将会自动重启,屏幕显示倒地的机器人和 no command echo
+ </span>
+ <span class="comment">
+ 4.机身上电源音量键随便按按，大概一秒左右会出现 recovery 菜单，按音量键下移动到 apply update form adb 按电源键确认 
+ </span>
+ <span class="comment">
+ 5.在命令行窗口中执行 adb devices 之后会在 sideload 左面显示你机器的序列号
 
- 安装kde基础包
-<span class="comment"># pacman -S plasma</span>
-
- 安装ked完整包
-<span class="comment"># pacman -S plasma-meta</span>
-
- 只安装kde桌面软件
-<span class="comment"># pacman -S plasma-desktop</span>
-
- 然后是登录管理器SDDM
-<span class="comment"># pacman -S sddm</span>
-
- 将SDDM设置为开机自启动
-<span class="comment"># systemctl enable sddm</span>
-
- 接下来为了以后安装的方便，安装yaourt
- 安装yaourt 
- Yaourt没有被整合到系统安装中的工具，所以手动安装。
- 最简单安装Yaourt的方式是添加Yaourt源至您的 /etc/pacman.conf，在文件最后加入:
-[archlinuxcn]
-<span class="comment">#The Chinese Arch Linux communities packages.</span>
-SigLevel = Optional TrustAll
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="variable">$arch</span>
-
- 刷新一下
-<span class="comment"># pacman -Syy</span>
-
- 看到archlinuxcn的字样。 
-
- 安装yaourt
-<span class="comment"># pacman -S yaourt</span>
-
- 中文输入法
- 这里安装ibus作为中文输入法
-<span class="comment"># sudo pacman -S ibus</span>
-<span class="comment"># sudo pacman -S ibus-pinyin</span>
-
-在~/.bashrc里面加入
-<span class="comment"># export GTK_IM_MODULE=ibus</span>
-<span class="comment"># export XMODIFIERS=@im=ibus</span>
-<span class="comment"># export QT_IM_MODULE=ibus</span>
-
- 然后在设置里启用输入法
- 你也可以安装fcitx：
-<span class="comment"># sudo pacman -S fcitx-im fcitx-configtool</span>
-
- 同样的，在~/.bashrc写入
-<span class="comment"># export GTK_IM_MODULE=fcitx</span>
-<span class="comment"># export QT_IM_MODULE=fcitx</span>
-<span class="comment"># export XMODIFIERS=“@im=fcitx”</span>
-
- 安装搜狗输入法
-<span class="comment"># yaourt -S fcitx-sogoupinyin</span>
-
- 然后进入fcitx设置进行配置即可
- 安装谷歌浏览器
-<span class="comment"># yaourt -S google-chrome</span>
-
-基本完成了！
+ 
 </code></pre>
-<p><img src="/img/arch/arch.png" alt="“kde”">  </p>
+
+
+
+
+
+
 
     
 
