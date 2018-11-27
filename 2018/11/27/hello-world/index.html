@@ -12,6 +12,8 @@
     
     <title>
         
+            archLinux 安装笔记 | 
+        
         BringChen
     </title>
 
@@ -65,15 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="BringChen">
+    <meta property="og:title" content="archLinux 安装笔记 | BringChen">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="平凡的脚步也可以走完伟大的行程">
     
 
     
+        <meta property="article:published_time" content="Mon Aug 14 2017 09:30:41 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Aug 15 2017 16:26:12 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="BringChen">
+    <meta name="twitter:title" content="archLinux 安装笔记 | BringChen">
     <meta name="twitter:description" content="平凡的脚步也可以走完伟大的行程">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,35 +86,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com" />
+        <link rel="canonical" href="http://yoursite.com/2017/08/14/hello-world/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
+
+
 <script type="application/ld+json">
 {
-    "@context": "http://schema.org",
-    "@type": "Website",
+    "@context": "https://schema.org",
+    "@type": "Article",
     "publisher": {
         "@type": "Organization",
         "name": "BringChen",
         "logo": "/img/favicon.png"
     },
-    "url": "http://yoursite.com/index.html",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.png"
+    "author": {
+        "@type": "Person",
+        "name": "BringChen",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "-没有泪光,风里劲闯,怀着心中新希望"
     },
+    "headline": "archLinux 安装笔记",
+    "url": "http://yoursite.com/2017/08/14/hello-world/index.html",
+    "datePublished": "Mon Aug 14 2017 09:30:41 GMT+0800",
+    "dateModified": "Tue Aug 15 2017 16:26:12 GMT+0800",
+    "description": "平凡的脚步也可以走完伟大的行程",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://yoursite.com"
-    },
-    "description": "平凡的脚步也可以走完伟大的行程"
+    }
 }
 </script>
-
-
 
 
     
@@ -347,293 +360,384 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
+                    <!-- Post TOC -->
+
     
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">
-        
-            
-                -没有泪光,风里劲闯,怀着心中新希望
-            
-        
-        </a></p>
-    </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/img/ava.png" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>BringChen</strong>
-        </div>
-    </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
-
-
-
-
-    <!-- Local -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
-            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-        </form>
-    </div>
-    <div id="local-search-result"></div>
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#" target="_blank">
-            <img src="/img/logo.png" alt="logo" />
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
         </a>
     </div>
+    -->
 
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>BringChen</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-                <a class="index_share-link" href="/about" title="关于我">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        关于我
-                    </li>
-                </a>
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=BringChen&url=http://yoursite.com/&pic=&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=BringChen&url=http://yoursite.com/&via=BringChen" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/index.html" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=http://yoursite.com/" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-
-            
-        </ul>
-    </div>
-</div>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
 
     
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 22 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/14/windows个人美化教程/">windows个人美化教程</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            美化win10的方案很多
- 先看看我的win10截图，因人而异。教程只需两步就可以搞定！
- 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/14/windows/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="BringChen's avatar">
-            </div>
-            <div>
-                <strong>BringChen</strong>
-                <span>8月 14, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/教程/">教程</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/14/archLinux/">archLinux 安装笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            欢迎来到BringChen的博客
-archLinux安装教程
-
- 个人建议分一...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/14/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="BringChen's avatar">
-            </div>
-            <div>
-                <strong>BringChen</strong>
-                <span>8月 14, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/教程/">教程</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 22 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                archLinux 安装笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/ava.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>BringChen</strong>
+        <span>8月 14, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=archLinux 安装笔记&url=http://yoursite.com/2017/08/14/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=archLinux 安装笔记&url=http://yoursite.com/2017/08/14/hello-world/index.html&via=BringChen" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/14/hello-world/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/14/hello-world/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>欢迎来到BringChen的博客</p>
+<p>archLinux安装教程</p>
+<pre><code class="bash">
+ 个人建议分一个区 sda1
+<span class="comment"># lsblk</span>
+
+ 格式化
+<span class="comment"># mkfs.ext4 /dev/sda1 </span>
+
+ 挂载
+<span class="comment"># mount /dev/sda1 /mnt</span>
+
+ 这里是源文件
+<span class="comment"># cd /etc/pacman.d</span>
+
+ 正则表达式保留中国源
+<span class="comment"># grep -A 1 '##.*China' mirrorlist|grep -v '\-\-'&gt; mirrorlist2</span>
+<span class="comment"># cat mirrorlist&gt;&gt;mirrorlist2</span>
+<span class="comment"># mv mirrorlist2 mirrorlist</span>
+
+ 刷新
+<span class="comment"># pacman -Syy</span>
+
+ 开始安装系统（需要等一小会儿）
+<span class="comment"># pacstrap -i /mnt base base-devel</span>
+
+ 最后一步
+<span class="comment"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span>
+
+ 进入系统
+<span class="comment"># arch-chroot /mnt</span>
+
+ 设置时间
+<span class="comment"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span>
+
+ 设置为utc
+<span class="comment"># hwclock --systohc --utc</span>
+
+<span class="comment"># nano /etc/locale.gen</span>
+ （填入以下内容，然后按ctrl+x按y回车保存退出）
+en_US.UTF-8 UTF-8
+zh_CN.UTF-8 UTF-8
+
+<span class="comment"># locale-gen</span>
+
+<span class="comment"># echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</span>
+
+<span class="comment"># echo myhostname &gt; /etc/hostname</span>
+//myhostname 自定义，取自己想要的名字
+
+<span class="comment"># nano /etc/hosts</span>
+//在 ::1        localhost.localdomain    localhost 的下一行添加以下内容，myhostname 和上文的一致
+127.0.1.1    myhostname.localdomain    myhostname
+
+<span class="comment"># mkinitcpio -p linux</span>
+
+ 设置root密码
+<span class="comment"># passwd root</span>
+
+ 添加用户，user 可自定义
+<span class="comment"># useradd -m -g users -s /bin/bash user</span>
+
+ 设置用户密码，user与上文相同
+<span class="comment"># passwd user</span>
+
+ 还有一步之遥了
+
+ efi引导（bios传统引导的看下面）
+<span class="comment"># pacman -S efibootmgr grub os-prober (efi引导）</span>
+<span class="comment"># grub-install --efi-directory=/boot --bootloader-id=grub(efi引导）</span>
+
+ bios传统引导
+ <span class="comment">#pacman -S grub-bios传统</span>
+<span class="comment">#grub-install /dev/sda传统---如果报错添加--force参数就好了</span>
+
+ 多系统用户一定要添加不然启动的时候就只有一个系统
+pacman -S os-prober 
+
+grub-install --force /dev/sda
+
+<span class="comment"># grub-mkconfig -o /boot/grub/grub.cfg</span>
+
+<span class="comment"># systemctl enable dhcpcd</span>
+
+<span class="comment"># exit</span>
+
+<span class="comment"># umount -R /mnt</span>
+
+<span class="comment"># reboot</span>
+</code></pre>
+<p>win10+archlinux双系统的继续操作</p>
+<p> 修改开机如把win设置为默认</p>
+<pre><code>默认情况下Windows 7/10对应的文件名是30_os-prober，第一个linux系统对应的是10-linux，00是header，05是debian-theme，
+可见10是第一个启动项，只需要更改Windows 7/10的文件名(06-09均可)即可改变启动顺序，经我测试，成功地修改了启动顺序。
+
+具体做法：
+</code></pre><pre><code class="bash"><span class="comment">#sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08_os-prober</span>
+<span class="comment">#sudo update-grub</span>
+</code></pre>
+<p> archlinux已经安装完成了接下来安装桌面，我安装的kde桌面</p>
+<p> 安装kde的桌面<br> <img src="/img/arch/arch4.png" alt="“kde”">  </p>
+<pre><code class="bash">
+ 安装plasma5 
+
+ 安装kde基础包
+<span class="comment"># pacman -S plasma</span>
+
+ 安装ked完整包
+<span class="comment"># pacman -S plasma-meta</span>
+
+ 只安装kde桌面软件
+<span class="comment"># pacman -S plasma-desktop</span>
+
+ 然后是登录管理器SDDM
+<span class="comment"># pacman -S sddm</span>
+
+ 将SDDM设置为开机自启动
+<span class="comment"># systemctl enable sddm</span>
+
+ 接下来为了以后安装的方便，安装yaourt
+ 安装yaourt 
+ Yaourt没有被整合到系统安装中的工具，所以手动安装。
+ 最简单安装Yaourt的方式是添加Yaourt源至您的 /etc/pacman.conf，在文件最后加入:
+[archlinuxcn]
+<span class="comment">#The Chinese Arch Linux communities packages.</span>
+SigLevel = Optional TrustAll
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="variable">$arch</span>
+
+ 刷新一下
+<span class="comment"># pacman -Syy</span>
+
+ 看到archlinuxcn的字样。 
+
+ 安装yaourt
+<span class="comment"># pacman -S yaourt</span>
+
+ 中文输入法
+ 这里安装ibus作为中文输入法
+<span class="comment"># sudo pacman -S ibus</span>
+<span class="comment"># sudo pacman -S ibus-pinyin</span>
+
+在~/.bashrc里面加入
+<span class="comment"># export GTK_IM_MODULE=ibus</span>
+<span class="comment"># export XMODIFIERS=@im=ibus</span>
+<span class="comment"># export QT_IM_MODULE=ibus</span>
+
+ 然后在设置里启用输入法
+ 你也可以安装fcitx：
+<span class="comment"># sudo pacman -S fcitx-im fcitx-configtool</span>
+
+ 同样的，在~/.bashrc写入
+<span class="comment"># export GTK_IM_MODULE=fcitx</span>
+<span class="comment"># export QT_IM_MODULE=fcitx</span>
+<span class="comment"># export XMODIFIERS=“@im=fcitx”</span>
+
+ 安装搜狗输入法
+<span class="comment"># yaourt -S fcitx-sogoupinyin</span>
+
+ 然后进入fcitx设置进行配置即可
+ 安装谷歌浏览器
+<span class="comment"># yaourt -S google-chrome</span>
+
+基本完成了！
+</code></pre>
+<p><img src="/img/arch/arch.png" alt="“kde”">  </p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/08/14/windows个人美化教程/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -914,12 +1018,12 @@ It will not impact the appearance and can give developers a lot of support :)
         它不会影响美观并可以给开发者很大的支持。 :)
         -->
 
-       <!-- <div class="mdl-mini-footer--right-section">
+        <div class="mdl-mini-footer--right-section">
             <div>
                 <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
                 <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
             </div>
-        </div>-->
+        </div>
     
 </footer>
 
@@ -966,112 +1070,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Swiftye -->
-    
-
-    <!-- Local Search-->
-    
-        <script type="text/ls-javascript" id="search-local-js-script">
-    var searchFunc = function(path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: 'xml',
-            success: function( xmlResponse ) {
-                // get the contents from search data
-                var datas = $( 'entry', xmlResponse ).map(function() {
-                    return {
-                        title: $( 'title', this ).text(),
-                        content: $('content',this).text(),
-                        url: $( 'url' , this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function() {
-                    var str='<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = '';
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function(data) {
-                        var isMatch = true;
-                        var content_index = [];
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g,'').toLowerCase();
-                        var data_url = data.url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if(data_title !== '' && data_content !== '') {
-                            keywords.forEach(function(keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if( index_title < 0 && index_content < 0 ) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += '<li><a href="'+ data_url +'" class="search-result-title" target="_blank">'+ data_title;
-                            var content = data.content.trim().replace(/<[^>]+>/g, '');
-                            if (first_occur >= 0) {
-                                // cut out characters
-                                var start = first_occur - 6;
-                                var end = first_occur + 6;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 10;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function(keyword) {
-                                    var regS = new RegExp(keyword, 'gi');
-                                    match_content = match_content.replace(regS, '<em class="search-keyword">'+keyword+'</em>');
-                                })
-                                str += '<p class="search-result">' + match_content + '...</p>' +'</a>';
-                            }
-                        }
-                    });
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    }
-</script>
-
-
-        <script type="text/ls-javascript" id="search-input-script">
-            var inputArea = document.querySelector('#search');
-            var getSearchFile = function() {
-                var path = 'search.xml';
-                searchFunc(path, 'search', 'local-search-result');
-            }
-
-            if(inputArea) {
-                inputArea.onfocus = function() {
-                    getSearchFile();
-                }
-            }
-        </script>
-    
 
 
 <!-- UC Browser Compatible -->
