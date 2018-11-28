@@ -595,7 +595,8 @@
   2.解压下载的ADB工具（解压下载的platform-tools），并ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录
  </span>
  <span class="comment">
-  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式（即bl）
+  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，
+  <br>手机则自动启动到bootloader模式（即bl）
  </span>
  <span class="comment">
   4.接下来解锁bl，在cmd里面输入<font style="color:red">astboot flashing unlock </font>在手机端进行确认后可解锁（注意：确认后手机会格式化）
@@ -619,10 +620,12 @@
  </span>
  <span class="comment">
   2.手机进入bootloader模式，连接电脑，ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录
-  <br>(<font style="color:red">重要：如果是第一次刷twrp，fastboot getvar current-slot若返回值为B则正常刷机，若返回值为A则fastboot set_active other后再操作</font>)
+  <br>(<font style="color:red">重要：如果是第一次刷twrp，fastboot getvar current-slot若返回值为B则正常刷机，
+  <br>若返回值为A则fastboot set_active other后再操作</font>)
  </span>
  <span class="comment">
-  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式（即bl）
+  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式
+  <br>（即bl）
  </span>
  <span class="comment">
   4.把下载的twrp.img放到解压adb工具(platform-tools)目录，输入<font style="color:red">fastboot flash boot twrp.img</font>
@@ -648,10 +651,12 @@
  </span>
  <span class="comment">
   2.手机进入bootloader模式，连接电脑，ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录
-  <br>(<font style="color:red">重要：如果是第一次刷twrp，fastboot getvar current-slot若返回值为B则正常刷机，若返回值为A则fastboot set_active other后再操作</font>)
+  <br>(<font style="color:red">重要：如果是第一次刷twrp，fastboot getvar current-slot若返回值为B则正常刷机，
+  <br>若返回值为A则fastboot set_active other后再操作</font>)
  </span>
  <span class="comment">
-  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式（即bl）
+  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式
+  <br>（即bl）
  </span>
  <span class="comment">
   4.把下载的twrp.img放到解压adb工具(platform-tools)目录，输入<font style="color:red">fastboot set_active other</font>，
