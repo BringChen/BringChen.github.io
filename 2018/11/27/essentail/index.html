@@ -581,13 +581,86 @@
  <span class="comment">
  7.结束后选择 reboot 重启手机就可以了
  </span>
- 2.线刷官方stock包
+
 </code></pre>
 
+<h3><a  class="headerlink" ></a>2.线刷官方stock包（<font style="color:red">只支持官方线刷固件</font>）</h3>
 
+<pre><code class="bash">
 
+<span class="comment">
+  1.手机进开发者模式打开OEM解锁，打开后，最好以后不要动它了（<font style="color:red">如果是灰色的请科学上网登陆谷歌账号后即可</font>）
+ </span>
+ <span class="comment">
+  2.解压下载的ADB工具（解压下载的platform-tools），并ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录
+ </span>
+ <span class="comment">
+  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式（即bl）
+ </span>
+ <span class="comment">
+  4.接下来解锁bl，在cmd里面输入<font style="color:red">astboot flashing unlock </font>在手机端进行确认后可解锁（注意：确认后手机会格式化）
+ </span>
+ <span class="comment">
+  5.解锁后手机再进入bootloader模式，数据线连接到电脑
+ </span>
+  <span class="comment">
+  6.解压下载的官方的线刷包，将解压的platform-tools的文件放到你刚刚解压的线刷包根目录，点击<font style="color:red">flashall.bat</font>，慢慢等待自动重启手机即可
+ </span>
+</code></pre>
 
+<h3><a  class="headerlink" ></a>3.刷入twrp和ROOT</h3>
 
+<pre><code class="bash">
+ 下载该手机twrp.img，magsik.zip和对应的boot.img
+<span class="comment">
+  1.magsik.zip复制到手机里，复制boot.img到手机（<font style="color:red">如果你是官方rom，你还需要把对应版本的boot.img复制到手机，文件在线刷包解压出来后的根目录可以看到</font>）
+ </span>
+ <span class="comment">
+  2.手机进入bootloader模式，连接电脑，ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录(<font style="color:red">重要：如果是第一次刷twrp，fastboot getvar current-slot若返回值为B则正常刷机，若返回值为A则fastboot set_active other后再操作</font>)
+ </span>
+ <span class="comment">
+  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式（即bl）
+ </span>
+ <span class="comment">
+  4.把下载的twrp.img放到解压adb工具(platform-tools)目录，输入<font style="color:red">fastboot flash boot twrp.img</font>刷入twrp完成(这个是临时的twrp，意思是每次进入twrp都需要这样进来)
+ </span>
+ <span class="comment">
+  5.按音量键选择进入recovery模式
+ </span>
+  <span class="comment">
+  6.刷入boot.img,然后挂在system，再刷入magsik.zip（有些第三方rom，直接刷入magsik即可，不用刷boot.img）
+ </span>
+  <span class="comment">
+  7.重启手机，现在你的手机已经可以获取ROOT权限了
+ </span>
+</code></pre>
+
+<h3><a  class="headerlink" ></a>4.刷入永久twrp</h3>
+
+<pre><code class="bash">
+ 下载该essentail手机twrp.img和twrp.zip
+<span class="comment">
+  1.twrp.zip复制到手机里
+ </span>
+ <span class="comment">
+  2.手机进入bootloader模式，连接电脑，ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录(<font style="color:red">重要：如果是第一次刷twrp，fastboot getvar current-slot若返回值为B则正常刷机，若返回值为A则fastboot set_active other后再操作</font>)
+ </span>
+ <span class="comment">
+  3.手机进入bootloader模式，手机连接电脑，在cmd里输入<font style="color:red">adb reboot bootloader</font>命令，手机则自动启动到bootloader模式（即bl）
+ </span>
+ <span class="comment">
+  4.把下载的twrp.img放到解压adb工具(platform-tools)目录，输入<font style="color:red">fastboot set_active other</font>，再输入<font style="color:red">fastboot flash boot twrp.img</font>
+ </span>
+ <span class="comment">
+  5.按音量键选择进入recovery模式
+ </span>
+  <span class="comment">
+  6.刷入twrp卡刷包后，点击reboot，如果你是a分区就切换b分区，b分区同理
+ </span>
+  <span class="comment">
+  7.reboot recovery，现在你可以刷magisk，内核等等文件，（这个是永久的twrp了，以后可以直接关机状态下，先按住音量下，再按电源键，.按音量键选择进入recovery模式）
+ </span>
+</code></pre>
 
 
     
