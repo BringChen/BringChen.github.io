@@ -536,16 +536,19 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>欢迎来到BringChen的博客</p>
-<p>essentail phone刷机解锁教程</p>
+<p><h1 id="Material"><a title="Material" class="headerlink" href="#Material"></a>essentail phone刷机解锁教程</h1></p>
 
-下载ADB工具：https://developer.android.com/studio/releases/platform-tools
-下载essential phone（安卓之父）的驱动：https://www.essential.com/developer/current-builds
-当然如果嫌麻烦可以直接去我的网盘链接: https://pan.baidu.com/s/1hUST-kmUN_sczCnTrH7UrQ 提取码: wkde 
+下载ADB工具：https://developer.android.com/studio/releases/platform-tools<br>
+下载essential phone（安卓之父）的驱动：https://www.essential.com/developer/current-builds<br>
+当然如果嫌麻烦可以直接去我的网盘链接: https://pan.baidu.com/s/1hUST-kmUN_sczCnTrH7UrQ 提取码: wkde <br>
 
-
-准备工作：	
+<br>
+ <h3><a title="准备工作：" class="headerlink" ></a>准备工作：</h3>	
 <pre><code class="bash">
- 怎么打开开发者的模式就不用说了吧
+ <span class="comment">
+ 安装essentail phone官方驱动（Essential-PH1-WindowsDrivers.exe）
+ </span>
+  怎么打开开发者的模式就不用说了吧
 <span class="comment">
 设置 - 系统 - 关于手机 - 版本号（点五次）<br>
 设置 - 系统 - 开发人员选项 - OEM解锁 - 打开<br>
@@ -554,7 +557,7 @@
  2. 将手机通过 USB 线连接到电脑（如果手机端弹出提示同意调试）	
 </code></pre>
 
-1.OTA刷官方包方法（<font>只支持官方ota固件</font>）
+<h3><a  class="headerlink" ></a>1.OTA刷官方包方法（<font style="color:red">只支持官方ota固件</font>）</h3>	
 <pre><code class="bash">
  注意：本步骤是官方线刷步骤，只支持官方ota固件下的升级，无需手机解锁，无需手机 root。
 <span class="comment">
@@ -564,15 +567,21 @@
  2.解压下载的ADB工具（解压下载的platform-tools），并ctrl+r,输入cmd，在cmd中，cd到你解压adb工具(platform-tools)目录
  </span>
  <span class="comment">
- 3.在弹出的命令行窗口中输入 adb reboot recovery 回车，手机将会自动重启,屏幕显示倒地的机器人和 no command echo
+ 3.在弹出的命令行窗口中输入 adb reboot recovery 回车，手机将会自动重启,屏幕显示倒地的机器人和 no command 
  </span>
  <span class="comment">
  4.机身上电源音量键随便按按，大概一秒左右会出现 recovery 菜单，按音量键下移动到 apply update form adb 按电源键确认 
  </span>
  <span class="comment">
  5.在命令行窗口中执行 adb devices 之后会在 sideload 左面显示你机器的序列号
-
- 
+ </span>
+ <span class="comment">
+ 6.在命令行窗口中执行 adb sideload PH1-OTA-OPM1.180104.166.zip 升级开始
+ </span>
+ <span class="comment">
+ 7.结束后选择 reboot 重启手机就可以了
+ </span>
+ 2.线刷官方stock包
 </code></pre>
 
 
